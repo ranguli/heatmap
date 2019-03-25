@@ -20,9 +20,10 @@ m = folium.Map(
 )
 
 HeatMap(data).add_to(m)
-html = m._repr_html_()
+#html = m._repr_html_()
+html = m.get_root().render()
 f = open("map.html", "w")
 f.write(html)
 f.close()
-#html.save('map.html')
+#m.save('map.html')
 
